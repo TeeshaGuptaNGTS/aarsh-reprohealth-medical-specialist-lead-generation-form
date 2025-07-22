@@ -1,0 +1,216 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --lightBlue: #2ED1E2;
+  --blue: #edfefe;
+  --greyP: #788094;
+  --pink: #FE76A8;
+  --lightpink: #fe76a821;
+  --wispink: #FDF2F8;
+  --darkGrey: #475569;
+  --vista: #F4F0F1;
+  --lightgrey: #F1F5F9;
+  --Woodsmoke: #1A1A1A;
+  --Iron: #CCCCCC;
+  --White: #ffffff;
+  --black: #000000;
+  --athensGray: #F1F5F9;
+  --zircon: #F7F9FE;
+  --mysin: #FEB62F;
+  --stormGray: #636E88;
+  --doveGray: #27272A;
+  --brightgray: #3A3F510D;
+  /* profile button color*/
+  --ebb: #E9E4E4;
+  --Lynch: #64748B;
+  --zumthor: #E2E8F0;
+  --fiord: #475569;
+  --islandSpice: #FFFBEB;
+  --orangePeel: #F59E0B;
+  --vistaWhite: #F4F0F1;
+  --cloudBurst: #1D2B4F;
+  --midnight: #011632;
+  --pictonblue: #25B4F8;
+  --lightblue: #d0f0f7;
+  --blackhaze: #F8FAFC;
+  /* explore web card bg color*/
+  --gravel: #414146;
+  --applegreen: #00A500;
+  --lightgreen: #d8edd9;
+  --red: #EF4444;
+  --lightgray: #9CA3AF;
+  --navyblue: #274760;
+  /*counter number*/
+  --cyanblue: #0E7490;
+  --lightskyblue: #2ED1E226;
+  /* for package */
+  --silver: #BCBCBC1A;
+  /*Silver*/
+  --blueLink: rgba(0, 122, 255, 1);
+  --pgColor: rgba(87, 83, 78, 1);
+  --greyborder: #D1D5DB;
+  --packageList: "#343434";
+  --listText: #292524;
+  --canleReview: #E5E7EA;
+}
+
+@font-face {
+  font-family: "CustomFont";
+  src: url("../../public/assets/fonts/tw-cen-mt.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ModernEraFont";
+  src: url("../../public/assets/fonts/modern-era-medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../public/assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-Lato";
+  src: url("../../public/assets/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+h1{
+  font-family: 'Montserrat';
+  width: 80%;
+  line-height: 50px;
+  font-weight: 700;
+}
+input{
+
+  background-color: #fff;
+}
+label{
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+form h2{
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 30px;
+  font-family: 'Montserrat';
+
+}
+
+ul li{
+   font-family: 'Montserrat';
+}
+
+h3{
+
+
+    font-family:  'CustomFont';
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: var(--greyP) !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* to hide scrollbar in slots  */
+.scrollbar-hide {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari */
+}
+
+
+.space-y-3 ul li svg{
+  height: 30px;
+  width: 30px;
+}
+@media only screen and (max-width: 600px) {
+h1 {
+    font-family: 'Montserrat';
+    width: 100%;
+    line-height: 32px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.bg-gradient-to-br{
+  padding: 20px;
+}
+
+}
+
+/* for blink cursor pointer in anywhere except input, textarea start */
+* {
+  caret-color: transparent !important;
+}
+
+input:focus,
+textarea:focus {
+  caret-color: auto !important;
+}
+
+/* for blink cursor pointer in anywhere except input, textarea end */
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .fontsizesm {
+    @apply text-sm;
+  }
+
+  .fontsizebase {
+    @apply text-base;
+    @apply font-normal;
+  }
+
+  .fontsizelg {
+    @apply text-lg;
+  }
+
+  .fontsizexl {
+    @apply text-xl;
+  }
+
+  .fontsize2xl {
+    @apply text-2xl;
+  }
+
+  .fontsize3xl {
+    @apply text-3xl;
+  }
+
+  .fontsize4xl {
+    @apply text-4xl;
+  }
+}
