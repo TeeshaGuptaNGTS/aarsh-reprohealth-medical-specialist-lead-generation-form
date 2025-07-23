@@ -130,12 +130,12 @@ const Doctor = () => {
 
 
   const features = [
-    "Expand your reach beyond local geography",
+    "Get listed on India's first Reproductive Platform",
     "Set your own consultation timings",
-    "Zero marketing cost to acquire patients",
+    "Gain visibility of yours & your Specialty via our platform through our Social Media pages.",
     "Easy appointment and patient record management",
     "Secure and private online & in-person video consultations",
-    "Our team will get back to you to assist you.",
+   
   ];
 
 
