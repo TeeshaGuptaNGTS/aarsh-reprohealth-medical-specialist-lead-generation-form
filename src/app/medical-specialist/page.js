@@ -43,6 +43,7 @@ const Doctor = () => {
     };
     const alphaOnly = /^[A-Za-z\s]+$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const nameWithOptionalPrefix = /^(dr|mr|mrs|miss)\.?\s+[a-zA-Z]+(?:\s+[a-zA-Z]+)*$/i;
 
     let isValid = true;
 
@@ -50,7 +51,7 @@ const Doctor = () => {
     if (!firstName.trim()) {
       newErrors.firstName = "First name is required";
       isValid = false;
-    } else if (!alphaOnly.test(firstName)) {
+    } else if (!nameWithOptionalPrefix.test(firstName.trim())) {
       newErrors.firstName = "First name should contain only letters";
       isValid = false;
     }
