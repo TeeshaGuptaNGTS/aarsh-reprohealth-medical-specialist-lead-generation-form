@@ -89,9 +89,8 @@ const Doctor = () => {
 
     setErrors(newErrors);
 
-    if (!isValid) return;
-
-
+    if (!isValid) return; 
+    toast.success("Register successfully!")
     const reqBody = {
       name: `${firstName} ${lastName}`.trim(),
       mobileNumber,
@@ -99,32 +98,32 @@ const Doctor = () => {
 
     };
 
-    try {
-      const response = await axios.post(
-        `https://doctor-arsh-qms4.onrender.com/api/auth/register`,
-        reqBody,
-        {
-          headers: {
-            "Content-Type": "application/json"
-          }
-        }
-      );
+    // try {
+    //   const response = await axios.post(
+    //     `https://doctor-arsh-qms4.onrender.com/api/auth/register`,
+    //     reqBody,
+    //     {
+    //       headers: {
+    //         "Content-Type": "application/json"
+    //       }
+    //     }
+    //   );
 
-      if (response && response.status === 200) {
-        toast.success("Registration successful!");
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          mobileNumber: ''
-        });
-        setErrors({});
-      } else {
-        toast.error("Registration failed. Please try again.");
-      }
-    } catch (error) {
-      toast.error("Something went wrong. Please try again later.");
-    }
+    //   if (response && response.status === 200) {
+    //     toast.success("Registration successful!");
+    //     setFormData({
+    //       firstName: '',
+    //       lastName: '',
+    //       email: '',
+    //       mobileNumber: ''
+    //     });
+    //     setErrors({});
+    //   } else {
+    //     toast.error("Registration failed. Please try again.");
+    //   }
+    // } catch (error) {
+    //   toast.error("Something went wrong. Please try again later.");
+    // }
   };
 
 
@@ -182,7 +181,7 @@ const Doctor = () => {
           {/* Right Side - Form */}
           <div className="w-full md:w-1/2 flex justify-center items-center bg-gradient-to-br from-[#54efff] to-[#056873] py-12">
             <form
-              // onSubmit={handleSubmit}
+              onSubmit={handleSubmit}
               className="w-full max-w-lg sm:w-[80%] rounded-lg space-y-6"
             >
               <h2 className="text-2xl font-semibold text-[#056873] text-center">
