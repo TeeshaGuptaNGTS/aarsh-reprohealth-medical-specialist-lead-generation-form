@@ -146,7 +146,7 @@ const Doctor = () => {
       <div className="w-full bg-white">
         <div className="flex flex-col md:flex-row">
           {/* Left Side */}
-          <div className="w-full md:w-1/2 bg-gray-50  p-8 flex flex-col justify-center">
+          <div className="w-full md:w-1/2 bg-gray-50  p-8 flex flex-col justify-start md:min-h-screen lg:min-h-auto">
             <div className="max-w-2xl mx-auto space-y-6">
               <Image
                 src={logo.logoImage}
@@ -180,7 +180,7 @@ const Doctor = () => {
           </div>
 
           {/* Right Side - Form */}
-          <div className="w-full md:w-1/2 flex justify-center items-center bg-gradient-to-br from-[#54efff] to-[#056873] py-12">
+          <div className="w-full md:w-1/2 flex justify-center  md:justify-center md:min-h-screen lg:min-h-auto lg:justify-center md:items-start lg:items-start  bg-gradient-to-br from-[#54efff] to-[#056873] py-12">
             <form
               onSubmit={handleSubmit}
               className="w-full max-w-lg sm:w-[80%] rounded-lg space-y-6"
